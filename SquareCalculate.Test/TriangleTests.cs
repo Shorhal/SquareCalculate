@@ -8,6 +8,7 @@ namespace SquareCalculateNUnitTests
 {
     public class TriangleTests
     {
+        // Тестироование расчета треугольника круга по трем сторонам
         [Test]
         public void WhenCallTriangleSquare_ThenReturnSquareOfThisTriangle()
         {
@@ -17,6 +18,7 @@ namespace SquareCalculateNUnitTests
             Assert.That(triangle.Square, Is.EqualTo(9.921567));
         }
 
+        // Тестирование проверки прямой ли треугольник
         [Test]
         public void WhenCallTriangleIsRight_ThenReturnAskIsItRight()
         {
@@ -25,6 +27,7 @@ namespace SquareCalculateNUnitTests
             Assert.That(triangle.IsRight, Is.EqualTo(false));
         }
 
+        // Тестироование проверки может ли существовать треугольник с переданнимим длинами сторон в качеситве аргумента функции
         [Test]
         public void WhenCallTriangleWithInvalidArgument_ThenReturnThrowInvalidArgument()
         {
@@ -33,6 +36,7 @@ namespace SquareCalculateNUnitTests
             Assert.That(exeption.Message, Is.EqualTo("Invalid argument"));
         }
 
+        // Тестирование правильный ли треугольник
         [Test]
         public void WhenCallTriangleIsTriangle_ThenReturnAskIsItTriangle()
         {
