@@ -4,6 +4,7 @@ namespace SquareCalculateNUnitTests
     public class SquareCalculateTests
     {
         
+        // Тестирование расчета площади круга по радиусу
         [Test]
         public void WhenCallCircleSquare_ThenReturnSquareOfThisCircle()
         {

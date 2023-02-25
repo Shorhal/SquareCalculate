@@ -9,7 +9,7 @@ namespace GeometicFigures
 {
     public class Triangle : Figure
     {
-
+        
         private readonly bool Right;
 
         public bool IsRight()
@@ -26,12 +26,14 @@ namespace GeometicFigures
             }
         }
 
+        // Расчет площади треугольника по трем сторонам
         double SquareCalc(int a, int b, int c)
         {
             double p = (a + b + c) / 2.0;
             return Math.Round(Math.Sqrt(p * (p - a) * (p - b) * (p - c)), 6);
         }
 
+        // Проверка может ли существовать треугольник с длинами сторон переданными в качестве аргумента функции
         bool isTriangle(int a, int b, int c)
         {
             if(a==0 | b==0 | c == 0)
@@ -48,6 +50,7 @@ namespace GeometicFigures
             }
         }
 
+        // Проверка правильный ли треугольник
         bool isRight(int a, int b, int c)
         {
             double[] sort = new double[3] { a, b, c };
